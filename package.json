@@ -1,0 +1,18 @@
+{
+  "name": "b0tspasswordmanager",
+  "version": "1.0.0",
+  "description": "a Password Manager Created by @B0tCreati0n",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "password",
+    "manager"
+  ],
+  "author": "@B0tCreati0n",
+  "license": "MIT",
+  "dependencies": {
+    "node-forge": "^1.3.1"
+  }
+}

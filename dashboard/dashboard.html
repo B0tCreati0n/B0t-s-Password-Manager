@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>B0t's Password Manager</title>
+  <link href="./dashboardStyle.css" rel="stylesheet">
+</head>
+<body>
+  <h1>B0t's Password Manager</h1>
+
+  <h2>Stored Passwords</h2>
+  <ul id="passwordList" class="password-list">
+  </ul>
+
+  <h2>Add Password</h2>
+  <form class="add-form" onsubmit="return false;">
+    <input type="text" id="siteName" placeholder="Site Name" required>
+    <input type="password" id="password" placeholder="Password" required>
+    <input type="submit" value="Add" onclick="addPassword()">
+  </form>
+
+  <script src="./storedPasswords.js"></script>
+  <script>
+    function addPassword() {
+      var siteName = document.getElementById('siteName').value;
+      var password = document.getElementById('password').value;
+
+      // Perform any necessary validation here
+
+      // Add the password to the list
+      var passwordList = document.getElementById('passwordList');
+      var passwordItem = document.createElement('li');
+      passwordItem.classList.add('password-item');
+      passwordItem.textContent = siteName;
+      passwordList.appendChild(passwordItem);
+
+      // Clear the form inputs
+      document.getElementById('siteName').value = '';
+      document.getElementById('password').value = '';
+    }
+  </script>
+</body>
+</html>
